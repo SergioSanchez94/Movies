@@ -1,0 +1,31 @@
+<div class = "movie-detail">
+    <div class="gallery">
+        <a href="{{imagen}}">
+            <img src="{{imagen}}" alt="Portada {{title}}">
+        </a> 
+    </div>
+    <div class = "movie-information">
+        <div class="tituloPelicula">{{title}}</div>
+        {{#each 5}}
+            <img src="star.png" width="20px" alt="Valoracion {{rating}}">
+        {{/each}}
+        <p class="datosPelicula">Fecha de estreno: {{date}} <br>
+            Duración: {{duration}} <br>
+            Género: {{country}} <br>
+            Director: {{director}}</p>
+        <h4>Sinopsis:</h4>
+        <p class="description">{{description}}</p>
+        <a {{action 'toggleImageSize'}}>
+            <button class="opcionPelicula">Trailer</button>
+        </a>
+        <a {{action 'showMovie' title}}>
+            <button class="opcionPelicula">Ver</button>
+        </a>
+    </div>
+    <div class="trailer{{if isWide "wide"}}">
+        <h4>Trailer:</h4>
+            <iframe class="video"
+                src={{trailer}} allowfullscreen>
+            </iframe>  
+        </div>   
+</div>

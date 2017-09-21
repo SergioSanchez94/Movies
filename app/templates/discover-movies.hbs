@@ -1,0 +1,19 @@
+<h2>Explora estas películas...</h2>
+
+<div class="formBusqueda">
+    Búsqueda:<br>
+    {{input value=busqueda}}
+
+    <a {{action 'buscar' busqueda}}>
+        <button class="busquedaButton">Buscar</button>
+    </a>
+    <br>
+</div>
+
+<table>
+    {{#each movies as |Peliculas index|}}
+     <tr>
+        <td>{{movie-view title=Peliculas.Title imagen=Peliculas.Poster description=Peliculas.Plot rating=Peliculas.Rated date=Peliculas.Released duration=Peliculas.Runtime country=Peliculas.Genre director=Peliculas.Director trailer=Peliculas.trailer}}</td>
+     </tr>
+     {{/each}}
+</table>

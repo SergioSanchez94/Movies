@@ -1,5 +1,26 @@
-{{!-- The following component displays Ember's default welcome message. --}}
+{{!--
+The following component displays Ember's default welcome message.
 {{welcome-page}}
-{{!-- Feel free to remove this! --}}
+Feel free to remove this! 
+{{outlet}}
+--}}
+
+<h1>Movies</h1>
+
+<h6>Web de ejemplo para trabajar con EmberJS</h6>
+
+<div class="tab">
+{{#link-to 'discover-movies' class="button"}}
+   <button class="tablinks" onclick="openCity(event, 'Inicio')">Inicio</button>
+  {{/link-to}}
+  <button class="tablinks">Estrenos</button>
+  <button class="tablinks">Listado</button>
+  {{#link-to 'discover-cinemas' class="button"}}
+    <button class="tablinks">Cines</button>
+  {{/link-to}}
+  {{#link-to 'contact' class="button"}}
+    <button class="tablinks">Contacto</button>
+  {{/link-to}}
+</div>
 
 {{outlet}}
