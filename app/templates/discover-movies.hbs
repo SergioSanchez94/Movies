@@ -1,7 +1,6 @@
 <h2>Explora estas películas...</h2>
 
 <div class="formBusqueda">
-    Búsqueda:<br>
     {{input value=busqueda}}
 
     <a {{action 'buscar' busqueda}}>
@@ -13,7 +12,8 @@
 <table>
     {{#each movies as |Peliculas index|}}
      <tr>
-        <td>{{movie-view title=Peliculas.Title imagen=Peliculas.Poster description=Peliculas.Plot rating=Peliculas.Rated date=Peliculas.Released duration=Peliculas.Runtime country=Peliculas.Genre director=Peliculas.Director trailer=Peliculas.trailer}}</td>
+        <td class= "movie">{{movie-view title=Peliculas.Title imagen=Peliculas.Poster description=Peliculas.Plot rating=Peliculas.Rated date=Peliculas.Released duration=Peliculas.Runtime country=Peliculas.Genre director=Peliculas.Director trailer=Peliculas.trailer valoracion=Peliculas.imdbRating ratings=Peliculas.Ratings}}</td>
      </tr>
+     <br>
      {{/each}}
 </table>

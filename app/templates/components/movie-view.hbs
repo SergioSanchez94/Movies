@@ -9,23 +9,23 @@
         {{#each 5}}
             <img src="star.png" width="20px" alt="Valoracion {{rating}}">
         {{/each}}
-        <p class="datosPelicula">Fecha de estreno: {{date}} <br>
+        <p class="datosPelicula">
+            Valoracion : {{valoracion}} <br>
+            Fecha de estreno: {{date}} <br>
             Duración: {{duration}} <br>
             Género: {{country}} <br>
             Director: {{director}}</p>
         <h4>Sinopsis:</h4>
-        <p class="description">{{description}}</p>
-        <a {{action 'toggleImageSize'}}>
-            <button class="opcionPelicula">Trailer</button>
-        </a>
-        <a {{action 'showMovie' title}}>
-            <button class="opcionPelicula">Ver</button>
-        </a>
+        <p class="description">{{description}}</p>  
+        <div>
+            <h4>Calificaciones:</h4>
+            {{#each ratings as |Rating index|}}
+                <tr class="calification">
+                    <td>{{Rating.Source}}: </td>
+                    <td><strong>{{Rating.Value}}</strong></td>
+                </tr>
+            {{/each}}
+        </div>
+        <br>
     </div>
-    <div class="trailer{{if isWide "wide"}}">
-        <h4>Trailer:</h4>
-            <iframe class="video"
-                src={{trailer}} allowfullscreen>
-            </iframe>  
-        </div>   
 </div>
