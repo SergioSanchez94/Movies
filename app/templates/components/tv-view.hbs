@@ -1,0 +1,22 @@
+<div class = "movie-detail">
+    <div class="gallery">
+        <a href="{{imagen}}">
+            {{#if imagen}}
+                <img src="https://image.tmdb.org/t/p/w500{{imagen}}" alt="Portada {{title}}">
+            {{else}}
+                 <img src="http://www.marklevinson.com/tl_files/images/nopic.png" alt="Portada {{title}}">
+            {{/if}}
+        </a> 
+    </div>
+    <div class = "movie-information">
+        <div class="tituloPelicula">{{title}}</div>
+        {{#each 5}}
+            <img src="star.png" width="20px" alt="Valoracion {{rating}}">
+        {{/each}}
+        <p class="datosPelicula">
+            Valoracion : {{valoracion}} </p>
+        <h4>Sinopsis:</h4>
+        <p class="description">{{description}}</p>  
+        <br>
+    </div>
+</div>

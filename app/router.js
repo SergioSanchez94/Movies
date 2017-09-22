@@ -8,6 +8,7 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('discover-movies');
+  this.route('discover-tv');
 });
 
 export default Router;

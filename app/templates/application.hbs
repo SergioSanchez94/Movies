@@ -11,10 +11,14 @@ Feel free to remove this!
 
 <div class="tab">
 {{#link-to 'discover-movies' class="button"}}
-   <button class="tablinks" onclick="openCity(event, 'Inicio')">Inicio</button>
+   <button class="tablinks">Inicio</button>
 {{/link-to}}
- <button class="tablinks" onclick="openCity(event, 'Inicio')">Películas</button>
-<button class="tablinks" onclick="openCity(event, 'Inicio')">TV</button>
+{{#link-to 'discover-movies' class="button"}}
+    <button class="tablinks">Películas</button>
+{{/link-to}}
+{{#link-to 'discover-tv' class="button"}}
+    <button class="tablinks">TV</button>
+{{/link-to}}
 </div>
 
 {{outlet}}

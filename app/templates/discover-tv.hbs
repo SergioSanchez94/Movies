@@ -1,0 +1,20 @@
+<h2>TV Shows</h2>
+<div class="formBusqueda">
+    {{input action="buscar" onkeypress="buscar" value=busqueda placeholder="Buscar..."}}
+    <a {{action 'buscar' busqueda}}>
+        <button class="busquedaButton">Buscar</button>
+    </a>
+    <br>
+</div>
+<table>
+    {{#if search}}
+        {{#each shows as |Serie index|}}
+            <tr>
+                <td class= "movie">{{tv-view title=Serie.name imagen=Serie.poster_path description=Serie.overview valoracion=Serie.vote_average}}</td>
+            </tr>
+            <br>
+        {{/each}}
+    {{else}}
+        <h2>No se encontraron resultados.</h2>
+    {{/if}}
+</table>
