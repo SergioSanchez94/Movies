@@ -1,19 +1,16 @@
 <h2>Explora estas películas...</h2>
-
 <div class="formBusqueda">
     {{input action="buscar" onkeypress="buscar" value=busqueda placeholder="Buscar..."}}
-
     <a {{action 'buscar' busqueda}}>
         <button class="busquedaButton">Buscar</button>
     </a>
     <br>
 </div>
-
 <table>
     {{#if search}}
         {{#each movies as |Peliculas index|}}
             <tr>
-                <td class= "movie">{{movie-view title=Peliculas.title imagen=Peliculas.poster_path description=Peliculas.overview rating=Peliculas.vote_average date=Peliculas.release_date duration=Peliculas.Runtime country=Peliculas.Genre director=Peliculas.Director trailer=Peliculas.trailer valoracion=Peliculas.vote_average ratings=Peliculas.Ratings}}</td>
+                <td class= "movie">{{movie-view title=Peliculas.title imagen=Peliculas.poster_path description=Peliculas.overview rating=Peliculas.vote_average date=Peliculas.release_date duration=Peliculas.Runtime country=Peliculas.Genre director=Peliculas.Director trailer=Peliculas.trailer valoracion=Peliculas.vote_average ratings=Peliculas.Ratings fondo=Peliculas.backdrop_path}}</td>
             </tr>
             <br>
         {{/each}}
