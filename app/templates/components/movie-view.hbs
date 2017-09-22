@@ -1,7 +1,11 @@
 <div class = "movie-detail">
     <div class="gallery">
         <a href="{{imagen}}">
-            <img src="{{imagen}}" alt="Portada {{title}}">
+            {{#if imagen}}
+                <img src="https://image.tmdb.org/t/p/w500{{imagen}}" alt="Portada {{title}}">
+            {{else}}
+                 <img src="http://www.marklevinson.com/tl_files/images/nopic.png" alt="Portada {{title}}">
+            {{/if}}
         </a> 
     </div>
     <div class = "movie-information">
@@ -11,21 +15,9 @@
         {{/each}}
         <p class="datosPelicula">
             Valoracion : {{valoracion}} <br>
-            Fecha de estreno: {{date}} <br>
-            Duración: {{duration}} <br>
-            Género: {{country}} <br>
-            Director: {{director}}</p>
+            Fecha de estreno: {{date}}</p>
         <h4>Sinopsis:</h4>
         <p class="description">{{description}}</p>  
-        <div>
-            <h4>Calificaciones:</h4>
-            {{#each ratings as |Rating index|}}
-                <tr class="calification">
-                    <td>{{Rating.Source}}: </td>
-                    <td><strong>{{Rating.Value}}</strong></td>
-                </tr>
-            {{/each}}
-        </div>
         <br>
     </div>
 </div>

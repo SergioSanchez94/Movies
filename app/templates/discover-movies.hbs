@@ -13,7 +13,7 @@
     {{#if search}}
         {{#each movies as |Peliculas index|}}
             <tr>
-                <td class= "movie">{{movie-view title=Peliculas.Title imagen=Peliculas.Poster description=Peliculas.Plot rating=Peliculas.Rated date=Peliculas.Released duration=Peliculas.Runtime country=Peliculas.Genre director=Peliculas.Director trailer=Peliculas.trailer valoracion=Peliculas.imdbRating ratings=Peliculas.Ratings}}</td>
+                <td class= "movie">{{movie-view title=Peliculas.title imagen=Peliculas.poster_path description=Peliculas.overview rating=Peliculas.vote_average date=Peliculas.release_date duration=Peliculas.Runtime country=Peliculas.Genre director=Peliculas.Director trailer=Peliculas.trailer valoracion=Peliculas.vote_average ratings=Peliculas.Ratings}}</td>
             </tr>
             <br>
         {{/each}}
