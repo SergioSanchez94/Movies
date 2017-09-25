@@ -18,9 +18,10 @@
             Fecha de estreno: {{date}}</p>
         <h4>Sinopsis:</h4>
         <p class="description">{{description}}</p>  
-        <br>
         <a {{action 'getMovie' title}}>
-        <button class="busquedaButton">Ver</button>
-    </a>
+            <button class="opcionPelicula">Añadir a mi biblioteca</button>
+        </a>
+        <p class="description">{{response}}</p>
+        <br>
     </div>
 </div>
