@@ -1,10 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-    isWide : false,
     actions: {
-        toggleImageSize() {
-          this.toggleProperty('isWide');
+        getMovie(titulo) {
+          Ember.$.get('http://localhost:8080/getMovie?name=' + titulo).then(function(data){
+          });
         }
       }
 });
