@@ -5,7 +5,7 @@ export default Ember.Component.extend({
     actions: {
         getMovie(titulo) {
           var self = this;
-          Ember.$.get('http://localhost:8080/getMovie?name=' + titulo + '&ip=' + "1234").then(function(data){
+          Ember.$.get('http://localhost:8080/getMovie?name=' + titulo + '&ip=' + "1234" + '&qu=' + "MicroHD-1080p").then(function(data){
             self.set('response',data);
           });
         }
