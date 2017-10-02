@@ -1,0 +1,26 @@
+<div class = "movie-detail">
+    <div class="gallery">
+        <a href="{{infoMovie.img}}" target="_blank">
+            {{#if infoMovie.img}}
+                <img src="{{infoMovie.img}}" alt="Portada {{title}}">
+            {{else}}
+                 <img src="http://www.marklevinson.com/tl_files/images/nopic.png" alt="Portada {{title}}">
+            {{/if}}
+        </a> 
+    </div>
+    <div class = "movie-information">
+        <div class="tituloPelicula">{{title}}</div>
+        <p class="datosPelicula">
+            Año de estreno: {{infoMovie.date}} <br>
+            Calidad : {{quality}} <br> 
+            Tamaño: {{infoMovie.size}} <br>
+            <a href="{{trailer}}" target="_blank">YouTube Trailer</a> </p>
+        <a {{action 'getMovie' url search}}>
+            <button class="opcionPelicula">Mostrar más información</button>
+        </a>
+        <a {{action 'sendMovie' url}}>
+            <button class="opcionPelicula">Añadir</button>
+        </a>
+        <br>
+    </div>
+</div>

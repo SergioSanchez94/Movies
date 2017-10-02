@@ -1,0 +1,20 @@
+<h2>Biblioteca</h2>
+<div class="formBusqueda">
+    {{input action="buscar" onkeypress="buscar" value=busqueda placeholder="Buscar..."}}
+    <a {{action 'buscar' busqueda}}>
+        <button class="busquedaButton">Buscar</button>
+    </a>
+    <br>
+</div>
+<table>
+    {{#if search}}
+        {{#each movies as |Movie index|}}
+            <tr>
+                <td class= "movie">{{library-movie title=Movie.name url=Movie.url quality=Movie.quality search=busqueda}}</td>
+            </tr>
+            <br>
+        {{/each}}
+    {{else}}
+        <h2>No se encontraron resultados.</h2>
+    {{/if}}
+</table>
