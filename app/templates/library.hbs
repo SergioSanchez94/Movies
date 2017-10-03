@@ -1,11 +1,12 @@
-<h2>Biblioteca</h2>
 <div class="formBusqueda">
     {{input action="buscar" onkeypress="buscar" value=busqueda placeholder="Buscar..."}}
     <a {{action 'buscar' busqueda}}>
         <button class="busquedaButton">Buscar</button>
     </a>
-    <br>
 </div>
+<br>
+<div class={{loading}}></div>
+<br>
 <table>
     {{#if search}}
         {{#each movies as |Movie index|}}

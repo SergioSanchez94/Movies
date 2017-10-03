@@ -1,11 +1,10 @@
-<h2>TV Shows</h2>
 <div class="formBusqueda">
     {{input action="buscar" onkeypress="buscar" value=busqueda placeholder="Buscar..."}}
     <a {{action 'buscar' busqueda}}>
         <button class="busquedaButton">Buscar</button>
     </a>
-    <br>
 </div>
+<br>
 <table>
     {{#if search}}
         {{#each shows as |Serie index|}}
